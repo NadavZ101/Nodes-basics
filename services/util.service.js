@@ -5,7 +5,7 @@ import https from 'https'
 export const utilService = {
 	httpGet,
 	readJsonFile,
-    download,
+	download,
 }
 
 // Make an http request
@@ -50,7 +50,7 @@ function download(url, fileName) {
 			file.on('error', reject)
 			file.on('finish', () => {
 				file.close()
-				resolve()
+				resolve(`${fileName} downloaded successfully`)
 			})
 		})
 	})
